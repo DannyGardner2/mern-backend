@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Danny",
+        "age": "34",
+        "weight": "500lb"
+    },
+    {
+        "name": "Jim",
+        "age": "25",
+        "weight": "250lb"
+    },
+    {
+        "name": "Tom",
+        "age": "15",
+        "weight": "300lb"
+    },
+    {
+        "name": "Bill",
+        "age": "62",
+        "weight": "150lb"
+    }
+]
