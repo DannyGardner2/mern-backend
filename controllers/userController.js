@@ -17,7 +17,7 @@ router.get('/:id', async (req, res, next) => {
         } else {
             res.sendStatus(404)
         }
-    } catch(err) {
+    } catch (err) {
         next(err)
     }
 })
@@ -35,12 +35,15 @@ router.route('/').post((req, res) => {
 router.put('/:id', async (req, res, next) => {
     try {
         const userToUpdate = await User.findOneAndUpdate(
+
             parseInt(req.params.id),
             req.body,
             {
                 new: true
             }
         )
+        console.log(req.params)
+
         if (userToUpdate) {
             res.json(userToUpdate)
         } else {
@@ -52,11 +55,6 @@ router.put('/:id', async (req, res, next) => {
     }
 })
 
-// router.route('/:id').delete((req, res) => {
-//     console.log(req.params)
-//     const userToDelete = User.findByIdAndDelete(req.params.id)
-
-// })
 
 router.delete('/:id', async (req, res, next) => {
     try {
